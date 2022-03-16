@@ -11,22 +11,23 @@ ring[2]="00||00"
 ring[3]="000||000"
 ring[4]="0000||0000"
 ring[5]="00000||00000"
+ring[6]="000000||000000"
 
 clear = lambda :os.system("cls")
 
-tower_a = [5,4,3,2,1,0,0]
-tower_b = [0,0,0,0,0,0,0]
-tower_c = [0,0,0,0,0,0,0]
-tower_win = [5,4,3,2,1,0,0]
+tower_a = [6,5,4,3,2,1,0,0]
+tower_b = [0,0,0,0,0,0,0,0]
+tower_c = [0,0,0,0,0,0,0,0]
+tower_win = [6,5,4,3,2,1,0,0]
 
 
 
 def game():
     print()
-    print("{:>25}".format("Hanoi-Towers"))
+    print("{:>35}".format("Hanoi-Towers"))
     print()
-    for element in reversed(range(7)):
-        print(f"{ring[tower_a[element]]:^15}{ring[tower_b[element]]:^15}{ring[tower_c[element]]:^15}")
+    for element in reversed(range(len(tower_win))):
+        print(f"{ring[tower_a[element]]:^20}{ring[tower_b[element]]:^20}{ring[tower_c[element]]:^20}")
     print()
     print("Bitte Eingabe von->nach z.B.: 'ac'; Ende mit 'q'")
     eingabe = input()
@@ -65,7 +66,7 @@ def game():
                 print("{:>25}".format("Hanoi-Towers"))
                 print()
                 for element in reversed(range(7)):
-                    print(f"{ring[tower_a[element]]:^15}{ring[tower_b[element]]:^15}{ring[tower_c[element]]:^15}")
+                    print(f"{ring[tower_a[element]]:^20}{ring[tower_b[element]]:^20}{ring[tower_c[element]]:^20}")
 
                 if tower_dict[destination] == tower_win:
                         print(" you won!")
@@ -87,10 +88,10 @@ def game():
                 tower_dict[source][tower_dict_pos[source] - 1] = 0
                 tower_dict[destination][tower_dict_pos[destination]] = source_val
                 clear()
-                print("{:>25}".format("Hanoi-Towers"))
+                print("{:>35}".format("Hanoi-Towers"))
                 print()
                 for element in reversed(range(7)):
-                    print(f"{ring[tower_a[element]]:^15}{ring[tower_b[element]]:^15}{ring[tower_c[element]]:^15}")
+                    print(f"{ring[tower_a[element]]:^20}{ring[tower_b[element]]:^20}{ring[tower_c[element]]:^20}")
 
                 if tower_dict[destination] == tower_win:
                         print()
