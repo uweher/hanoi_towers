@@ -90,7 +90,7 @@ def game():
                 clear()
                 print("{:>35}".format("Hanoi-Towers"))
                 print()
-                for element in reversed(range(7)):
+                for element in reversed(range(len(tower_win))):
                     print(f"{ring[tower_a[element]]:^20}{ring[tower_b[element]]:^20}{ring[tower_c[element]]:^20}")
 
                 if tower_dict[destination] == tower_win:
