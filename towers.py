@@ -93,6 +93,7 @@ def game():
                     print(f"{ring[tower_a[element]]:^15}{ring[tower_b[element]]:^15}{ring[tower_c[element]]:^15}")
 
                 if tower_dict[destination] == tower_win:
+                        print()
                         print("Gewonnen!!")
                         break
 
@@ -109,26 +110,6 @@ def game():
                 print(source + str(source_pos) + "->" + destination + str(dest_pos))
                 print("Bitte gültigen Wert eingeben!")
                 eingabe = input()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
